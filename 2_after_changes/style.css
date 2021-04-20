@@ -1027,3 +1027,22 @@ h4 {
         text-align: center;
     }
 }
+
+.color-darkgrey {
+    color: #404040!important;
+}
+.color-white {
+    color: #FFFFFF!important;
+}
+.texture-paper-low-opacity::before {
+    background: url("img/texture-paper.png");
+    background-size: 280px 280px;
+    opacity:0.05;
+}
+.high-z-index {
+    position: relative;
+    z-index: 30;
+}
+/* .responsive-list @media screen and (min-width: 768px) {
+
+} */
