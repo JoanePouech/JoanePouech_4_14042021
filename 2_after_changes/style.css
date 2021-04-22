@@ -31,7 +31,6 @@ a:hover {
     width: 100%;
     clear: both;
     background: 50% 50% no-repeat;
-    padding: 0 50px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,8 +39,9 @@ a:hover {
 }
 
 .bloc .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
 }
 
 .bloc-lg {
@@ -508,6 +508,7 @@ button {
 .form-control {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
+    max-width: 100%;
 }
 
 .scrollToTop {
@@ -701,7 +702,9 @@ p {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 h2 {
@@ -740,7 +743,7 @@ h4 {
 }
 
 .portfolio-thumb {
-    margin-bottom: 24px;
+    margin: 0 auto 24px auto;
 }
 
 .portfolio-row {
@@ -822,14 +825,10 @@ h4 {
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
-    .bloc {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
     .bloc.full-width-bloc,
     .bloc-tile-2.full-width-bloc .container,
     .bloc-tile-3.full-width-bloc .container,
@@ -848,22 +847,19 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
 @media (max-width: 991px) {
-    .container {
-        width: 100%;
-    }
     .b-parallax {
         background-attachment: scroll;
     }
@@ -871,10 +867,6 @@ h4 {
     #hero-bloc {
         overflow-x: hidden;
         position: relative;
-    }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -884,8 +876,7 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+
     }
 }
 
@@ -973,10 +964,6 @@ h4 {
         float: left;
         margin-left: 10px;
     }
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
     .bloc-xxl,
     .bloc-xl,
     .bloc-lg {
@@ -1028,15 +1015,30 @@ h4 {
     }
 }
 
-@media (max-width: 400px) {
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
 @media (max-width: 767px) {
     .bloc-mob-center-text {
         text-align: center;
     }
 }
+
+.navbar-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.color-darkgrey {
+    color: #404040!important;
+}
+.color-white {
+    color: #FFFFFF!important;
+}
+.texture-paper-low-opacity::before {
+    background: url("img/texture-paper.png");
+    background-size: 280px 280px;
+    opacity:0.05;
+}
+.high-z-index {
+    position: relative;
+    z-index: 30;
+}
+
